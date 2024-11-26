@@ -1,24 +1,31 @@
+[
+  {
+    "latitude": 8.359836,
+    "longitude": 124.869316,
+    "message": "Garden 1"
+    
+  },
 
-{
-    "garbageData": [
-      {
-        "id": 1,
-        "name": "",
-        "image": "https://i.pinimg.com/736x/f7/18/15/f7181569f1f650ff3955858c23112b9c.jpg",
-        "location": { "lat": 8.360725, "lng": 124.868230 }
-      },
-      {
-        "id": 2,
-        "name": "",
-        "image": "https://i.pinimg.com/736x/f7/18/15/f7181569f1f650ff3955858c23112b9c.jpg",
-        "location": { "lat": 8.359950, "lng": 124.867952 }
-      },
-      {
-        "id": 3,
-        "name": "",
-        "image": "https://i.pinimg.com/736x/f7/18/15/f7181569f1f650ff3955858c23112b9c.jpg",
-        "location": { "lat": 8.359621, "lng": 124.868628 }
-      }
-    ]
+  {
+    "latitude": 8.359640,
+    "longitude": 124.869255,
+    "message": "Garden 2"
+    
+  },
+
+  {
+    "latitude": 8.360063,
+    "longitude": 124.869374,
+    "message": "Garden 3"
+    
+  },
+
+  {
+    "latitude": 8.360272,
+    "longitude": 124.869434,
+    "message": "Garden 4"
+    
   }
+
   
+]
