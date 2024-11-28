@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Green Earth</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f7f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffeb3b;
+            background-color: transparent;
+        }
+
+        /* Hero Section (Parallax + Image) */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-image: url('./garden/garden4.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            filter: brightness(0.6);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Description Boxes */
+        .description-boxes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -10vh;
+            padding: 50px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .description-box {
+            background-color: #fff;
+            width: 23%;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .description-box:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .description-box h5 {
+            font-size: 1.6rem;
+            color: #2E7D32;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .description-box p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .description-box:hover h5 {
+            color: #4CAF50;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.4);
+            color: #ffeb3b;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .navbar .navbar-nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .description-boxes {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .description-box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Northern Bukidnon State College Garden</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/garden1.html">Garden 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/garden2.html">Garden 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/garden3.html">Garden 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/garden4.html">Garden 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Welcome to Garden 4</h1>
+            
+        </div>
+    </section>
+
+   
+
+    <div class="container description-boxes">
+        <div class="description-box">
+            <h5>Onions</h5>
+            <p>Health Benefits: The antioxidants and sulfur compounds found in onions, such as allyl propyl disulfide, can help lower cholesterol levels and reduce blood pressure, both of which are important for maintaining cardiovascular health.
+                The flavonoid quercetin has been shown to improve blood vessel function, reducing the risk of atherosclerosis (plaque buildup in the arteries).</p>
+        </div>
+        <div class="description-box">
+            <h5>Garlic</h5>
+            <p>Health Benefits: Garlic has been found to have a beneficial effect on cardiovascular health by lowering blood pressure, reducing cholesterol levels, and improving blood circulation.
+                Allicin in garlic helps relax blood vessels, improving blood flow and reducing blood pressure. It also helps lower total and LDL ("bad") cholesterol, while increasing HDL ("good") cholesterol.</p>
+        </div>
+        <div class="description-box">
+            <h5>Tomatoes</h5>
+            <p>Health Benefits: Tomatoes are an excellent source of lycopene, a powerful antioxidant. Lycopene has been linked to a reduced risk of certain cancers (such as prostate cancer), heart disease, and eye conditions like macular degeneration.</p>
+        </div>
+        <div class="description-box">
+            <h5>Radish</h5>
+            <p>Health Benefits: Radishes are known for their ability to help clear the sinuses and improve breathing. They can act as a natural remedy for coughs, colds, and other respiratory issues due to their anti-inflammatory and expectorant properties.</p>
+        </div>
+    </div>
+   
+    <footer class="bg-success text-white py-4">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Northern Bukidnon State College. All Rights Reserved. | Embracing sustainability for a greener tomorrow.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

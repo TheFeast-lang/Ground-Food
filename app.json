@@ -1,31 +1,32 @@
-[
-  {
-    "latitude": 8.359836,
-    "longitude": 124.869316,
-    "message": "Garden 1"
-    
-  },
-
-  {
-    "latitude": 8.359640,
-    "longitude": 124.869255,
-    "message": "Garden 2"
-    
-  },
-
-  {
-    "latitude": 8.360063,
-    "longitude": 124.869374,
-    "message": "Garden 3"
-    
-  },
-
-  {
-    "latitude": 8.360272,
-    "longitude": 124.869434,
-    "message": "Garden 4"
-    
-  }
-
-  
-]
+{
+  "garbageData": [
+    {
+      "id": 1,
+      "name": "Garden 1",
+      "image": "./garden/garden1.jpg",
+      "location": { "lat": 8.359836, "lng": 124.869316 },
+      "htmlLink": "garden1.html" 
+    },
+    {
+      "id": 2,
+      "name": "Garden 2",
+      "image": "./garden/garden2.jpg",
+      "location": { "lat": 8.359640, "lng": 124.869255 },
+      "htmlLink": "garden2.html" 
+    },
+    {
+      "id": 3,
+      "name": "Garden 3",
+      "image": "./garden/garden3.jpg",
+      "location": { "lat": 8.360063, "lng": 124.869374 },
+      "htmlLink": "garden3.html" 
+    },
+    {
+      "id": 4,
+      "name": "Garden 4",
+      "image": "./garden/garden4.jpg",
+      "location": { "lat": 8.360272, "lng": 124.869434 },
+      "htmlLink": "garden4.html" 
+    }
+  ]
+}
