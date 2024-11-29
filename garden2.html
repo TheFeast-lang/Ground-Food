@@ -78,6 +78,8 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
+
+    
         /* Description Boxes */
         .description-boxes {
             display: flex;
@@ -126,6 +128,19 @@
         .description-box:hover h5 {
             color: #4CAF50;
         }
+
+        /* Description Box Image Styling */
+        .description-image {
+            width: 100%; 
+            max-width: 200px; 
+            height: auto; 
+            margin: 15px 0; 
+           border-radius: 10px; 
+           object-fit: cover; 
+        }
+
+        
+
 
         /* Footer */
         footer {
@@ -192,11 +207,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden1.html">Garden 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden2.html">Garden 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden3.html">Garden 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden4.html">Garden 4</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore Gardens
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./garden1.html">Garden 1</a></li>
+                            <li><a class="dropdown-item" href="./garden2.html">Garden 2</a></li>
+                            <li><a class="dropdown-item" href="./garden3.html">Garden 3</a></li>
+                            <li><a class="dropdown-item" href="./garden4.html">Garden 4</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -214,18 +235,22 @@
     <div class="container description-boxes">
         <div class="description-box">
             <h5>Bok Choy</h5>
+            <img src="./picture/bok choy.jpg" alt="bok choy" class="description-image">
             <p>Health Benefits:  good source of potassium, a mineral that helps regulate blood pressure by balancing the negative effects of sodium. The fiber and antioxidants in bok choy also contribute to lowering cholesterol and improving overall heart health.</p>
         </div>
         <div class="description-box">
             <h5>Green Chilli</h5>
+            <img src="./picture/green chilli.jpg" alt="green chilli" class="description-image">
             <p>Health Benefits: Green chilies are an excellent source of vitamin C, an essential antioxidant that boosts the immune system, promotes healthy skin, and supports wound healing.</p>
         </div>
         <div class="description-box">
             <h5>Green Beans</h5>
+            <img src="./picture/green bean.jpg" alt="green bean" class="description-image">
             <p>Health Benefits: Green beans are a good source of vitamin C, vitamin K, vitamin A, and folate. These vitamins support immune function, skin health, and tissue repair, among other functions.</p>
         </div>
         <div class="description-box">
             <h5>Squash</h5>
+            <img src="./picture/squash.jpg" alt="green bean" class="description-image">
             <p>Health Benefits: Squash, especially varieties like butternut squash and zucchini, are rich in vitamin A (from beta-carotene), vitamin C, vitamin B6, and folate. These vitamins support various bodily functions, including immune health, skin health, vision, and energy production.</p>
         </div>
     </div>

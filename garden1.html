@@ -127,6 +127,16 @@
             color: #4CAF50;
         }
 
+
+        .description-image {
+            width: 100%; 
+            max-width: 200px; 
+            height: auto; 
+            margin: 15px 0; 
+           border-radius: 10px; 
+           object-fit: cover; 
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
@@ -186,17 +196,23 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Northern Bukidnon State College Garden</a>
+            <a class="navbar-brand" href="./index.html">Northern Bukidnon State College Garden</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden1.html">Garden 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden2.html">Garden 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden3.html">Garden 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden4.html">Garden 4</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore Gardens
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./garden1.html">Garden 1</a></li>
+                            <li><a class="dropdown-item" href="./garden2.html">Garden 2</a></li>
+                            <li><a class="dropdown-item" href="./garden3.html">Garden 3</a></li>
+                            <li><a class="dropdown-item" href="./garden4.html">Garden 4</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -214,18 +230,22 @@
     <div class="container description-boxes">
         <div class="description-box">
             <h5>Potato</h5>
+            <img src="./picture/potato.jpg" alt="Potato" class="description-image">
             <p>Health Benefits: Potatoes are a nutritious and versatile food that offer several health benefits when prepared in a healthy way.</p>
         </div>
         <div class="description-box">
             <h5>Sweet Potatoes</h5>
+            <img src="./picture/sweet potato.jpg" alt="sweet potato" class="description-image">
             <p>Health Benefits: Rich in fiber, vitamin A, vitamin C, potassium, and antioxidants. Sweet potatoes have anti-inflammatory properties.</p>
         </div>
         <div class="description-box">
             <h5>Ginger</h5>
+            <img src="./picture/ginger.jpg" alt="ginger" class="description-image">
             <p>Health Benefits: Known for its anti-inflammatory and digestive benefits, ginger helps with nausea, boosts immunity, and supports heart health.</p>
         </div>
         <div class="description-box">
             <h5>Carrot</h5>
+            <img src="./picture/carrot.jpg" alt="carrot" class="description-image">
             <p>Health Benefits: Rich in beta-carotene, carrots are excellent for eye health, boosting immunity, and supporting healthy skin.</p>
         </div>
     </div>

@@ -54,7 +54,7 @@
         .hero {
             position: relative;
             height: 100vh;
-            background-image: url('/garden/garden3.jpg');
+            background-image: url('./garden/garden3.jpg');
             background-position: center;
             background-size: cover;
             background-attachment: fixed;
@@ -127,6 +127,15 @@
             color: #4CAF50;
         }
 
+        .description-image {
+            width: 100%; 
+            max-width: 200px; 
+            height: auto; 
+            margin: 15px 0; 
+           border-radius: 10px; 
+           object-fit: cover; 
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
@@ -186,17 +195,23 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Northern Bukidnon State College Garden</a>
+            <a class="navbar-brand" href="./index.html">Northern Bukidnon State College Garden</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden1.html">Garden 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden2.html">Garden 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden3.html">Garden 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden4.html">Garden 4</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore Gardens
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./garden1.html">Garden 1</a></li>
+                            <li><a class="dropdown-item" href="./garden2.html">Garden 2</a></li>
+                            <li><a class="dropdown-item" href="./garden3.html">Garden 3</a></li>
+                            <li><a class="dropdown-item" href="./garden4.html">Garden 4</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -215,18 +230,22 @@
     <div class="container description-boxes">
         <div class="description-box">
             <h5>EggPlant</h5>
+            <img src="./picture/eggplant.jpg" alt="green bean" class="description-image">
             <p>Health Benefits:Eggplants are a good source of vitamin C, vitamin K, and vitamin B6. Vitamin C supports the immune system, while vitamin K is essential for bone health and blood clotting. Vitamin B6 plays a role in brain health and metabolism.</p>
         </div>
         <div class="description-box">
             <h5>Okra</h5>
+            <img src="./picture/okra.jpg" alt="green bean" class="description-image">
             <p>Health Benefits:Okra's fiber and potassium content help support heart health. The fiber can help lower cholesterol levels, while potassium helps regulate blood pressure by balancing the effects of sodium in the body.</p>
         </div>
         <div class="description-box">
             <h5>Bell Peppers</h5>
+            <img src="./picture/bell paper.jpg" alt="green bean" class="description-image">
             <p>Health Benefits:Bell peppers are packed with antioxidants, which help protect the body from oxidative stress caused by free radicals. Free radicals can damage cells and contribute to chronic diseases such as heart disease, diabetes, and cancer.</p>
         </div>
         <div class="description-box">
             <h5>Kangkong</h5>
+            <img src="./picture/kang kong.jpg" alt="green bean" class="description-image">
             <p>Health Benefits:Kangkong is rich in vitamin A, particularly in the form of beta-carotene, which is essential for eye health. Vitamin A helps protect the eyes from age-related vision problems and supports night vision.</p>
         </div>
     </div>

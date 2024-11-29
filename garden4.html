@@ -127,6 +127,16 @@
             color: #4CAF50;
         }
 
+
+        .description-image {
+            width: 100%; 
+            max-width: 200px; 
+            height: auto; 
+            margin: 15px 0; 
+           border-radius: 10px; 
+           object-fit: cover; 
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
@@ -186,17 +196,23 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Northern Bukidnon State College Garden</a>
+            <a class="navbar-brand" href="./index.html">Northern Bukidnon State College Garden</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden1.html">Garden 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden2.html">Garden 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden3.html">Garden 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/garden4.html">Garden 4</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore Gardens
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./garden1.html">Garden 1</a></li>
+                            <li><a class="dropdown-item" href="./garden2.html">Garden 2</a></li>
+                            <li><a class="dropdown-item" href="./garden3.html">Garden 3</a></li>
+                            <li><a class="dropdown-item" href="./garden4.html">Garden 4</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -215,20 +231,24 @@
     <div class="container description-boxes">
         <div class="description-box">
             <h5>Onions</h5>
+            <img src="./picture/onion.jpg" alt="green bean" class="description-image">
             <p>Health Benefits: The antioxidants and sulfur compounds found in onions, such as allyl propyl disulfide, can help lower cholesterol levels and reduce blood pressure, both of which are important for maintaining cardiovascular health.
                 The flavonoid quercetin has been shown to improve blood vessel function, reducing the risk of atherosclerosis (plaque buildup in the arteries).</p>
         </div>
         <div class="description-box">
             <h5>Garlic</h5>
+            <img src="./picture/Garlic.jpg" alt="green bean" class="description-image">
             <p>Health Benefits: Garlic has been found to have a beneficial effect on cardiovascular health by lowering blood pressure, reducing cholesterol levels, and improving blood circulation.
                 Allicin in garlic helps relax blood vessels, improving blood flow and reducing blood pressure. It also helps lower total and LDL ("bad") cholesterol, while increasing HDL ("good") cholesterol.</p>
         </div>
         <div class="description-box">
             <h5>Tomatoes</h5>
+            <img src="./picture/Tomatoes.jpg" alt="green bean" class="description-image">
             <p>Health Benefits: Tomatoes are an excellent source of lycopene, a powerful antioxidant. Lycopene has been linked to a reduced risk of certain cancers (such as prostate cancer), heart disease, and eye conditions like macular degeneration.</p>
         </div>
         <div class="description-box">
             <h5>Radish</h5>
+            <img src="./picture/Radish.jpg" alt="green bean" class="description-image">
             <p>Health Benefits: Radishes are known for their ability to help clear the sinuses and improve breathing. They can act as a natural remedy for coughs, colds, and other respiratory issues due to their anti-inflammatory and expectorant properties.</p>
         </div>
     </div>
